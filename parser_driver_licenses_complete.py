@@ -312,10 +312,10 @@ class DriverLicense:
     
 
 if __name__ == '__main__':
-    folder_textdoc_path = "/Users/iamns45/Desktop/Drivers_Licenses_Parser-main/copy"
+    folder_textdoc_path = "C:/Users/kaurm/Desktop/OCR/Navy-Federal-Project/Data/July/DriversLicenses/Textfiles"
     textdoc_paths = base_parser.get_textdoc_paths(folder_textdoc_path)
     headerList = ['Pic Id', 'Date', 'FN', 'LN', 'DOB', 'DL Number', 'Exp Date', 'Gender', 'Height', 'Street', 'City', 'State', 'Zipcode', 'Full Address']
-    with open('driver_licenses_ns'+'.csv','w', newline='', encoding='utf-8') as f1:
+    with open('july_driver_licenses'+'.csv','w', newline='', encoding='utf-8') as f1:
         dw = csv.DictWriter(f1, delimiter=',', fieldnames=headerList)
         dw.writeheader()
         writer=csv.writer(f1, delimiter=',')
@@ -334,7 +334,7 @@ if __name__ == '__main__':
 
             ### parse zipcode and state
             with open(text_doc, encoding = "utf-8") as f:
-                if text_doc== '/Users/iamns45/Desktop/Drivers_Licenses_Parser-main/cpy/.DS_Store':
+                if text_doc== 'C:/Users/kaurm/Desktop/OCR/Navy-Federal-Project/Data/July/DriversLicenses/Textfiles/.DS_Store':
                     continue
                 print(text_doc)
                 content = f.readlines()
