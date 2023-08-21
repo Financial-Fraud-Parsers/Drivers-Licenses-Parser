@@ -222,11 +222,11 @@ class DriverLiecense:
             writer.writerow([photo_id, date, victimname, zipcode, state, valid_dl, dl_number, full_address])
 
 if __name__ == '__main__':
-    folder_textdoc_path = "C:/Users/kaurm/Desktop/OCR/Navy-Federal-Project/Data/June/DriversLicenses/Textfiles"
+    folder_textdoc_path = "C:/Users/kaurm/Desktop/OCR/Navy-Federal-Project/Data/July/DriversLicenses/Textfiles"
     # folder_textdoc_path = "C:/Users/jonat/OneDrive/Documents/EBCS Research/TestText"
     textdoc_paths = base_parser.get_textdoc_paths(folder_textdoc_path)
     headerList = ['Pic Id', 'Date', 'Victim Name', 'Zipcode', 'State', 'Valid DL','DL Number','Full Address']
-    with open('june_driver_licenses'+'.csv','w', newline='', encoding='utf-8') as f1:
+    with open('july_driver_licenses'+'.csv','w', newline='', encoding='utf-8') as f1:
         dw = csv.DictWriter(f1, delimiter=',', fieldnames=headerList)
         dw.writeheader()
         writer=csv.writer(f1, delimiter=',')#lineterminator='\n',
